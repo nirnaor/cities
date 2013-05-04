@@ -1,0 +1,33 @@
+<h1>Listing cities</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Transportation</th>
+    <th>Education</th>
+    <th>Costs</th>
+    <th>Security</th>
+    <th>Pollution</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @cities.each do |city| %>
+  <tr>
+    <td><%= city.name %></td>
+    <td><%= city.transportation %></td>
+    <td><%= city.education %></td>
+    <td><%= city.costs %></td>
+    <td><%= city.security %></td>
+    <td><%= city.pollution %></td>
+    <td><%= link_to 'Show', city %></td>
+    <td><%= link_to 'Edit', edit_city_path(city) %></td>
+    <td><%= link_to 'Destroy', city, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New City', new_city_path %>

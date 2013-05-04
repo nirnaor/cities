@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  transportation: 1
+  education: 1
+  costs: 1
+  security: 1
+  pollution: 1
+
+two:
+  name: MyString
+  transportation: 1
+  education: 1
+  costs: 1
+  security: 1
+  pollution: 1
