@@ -15,6 +15,7 @@ $(document).ready( function(){
 
     if ( sum > 100 ){
       alert( "all values must be sumemd up to 100");
+      $(ev.currentTarget).val(0);
     }
   } );
 
