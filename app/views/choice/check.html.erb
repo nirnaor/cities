@@ -1,6 +1,6 @@
 <p>Please state the priority you want for your city to live</p>
 
-<%= form_for @city do |f| %>
+<%= form_for @city , :url => choice_check_path, :method => "get" do |f|  %>
 
   <%= f.label :enviornment %>:
   <%= f.number_field :enviornment %><br />
