@@ -1,4 +1,7 @@
-//# Place all the behaviors and hooks related to the matching controller here.
-//# All this logic will automatically be available in application.js.
-//# You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
-console.log('nir');
+$( document ).ready( function(){
+  console.log('nirnaor');
+
+  $( "input[ type = 'number' ]").change(function( ev, data){
+    console.log('number changed');
+  });
+});
