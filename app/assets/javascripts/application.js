@@ -11,6 +11,7 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
+//= require underscore
 //= require jquery-ui
 //= require jquery_ujs
 //= require_tree .
