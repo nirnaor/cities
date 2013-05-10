@@ -12,6 +12,10 @@ $(document).ready( function(){
     } );
 
     console.log( sum );
+
+    if ( sum > 100 ){
+      alert( "all values must be sumemd up to 100");
+    }
   } );
 
 
