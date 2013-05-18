@@ -3,6 +3,10 @@ $(document).ready( function(){
   var num_inputs = "input[type='number']";
 
 
+    _( $(num_inputs) ).each( function( item ) {
+      $( item ).val( 20 );
+    } );
+
   $(num_inputs).change( function( ev ) {
     var sum = 0;
 
