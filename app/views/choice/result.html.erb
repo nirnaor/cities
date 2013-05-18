@@ -19,4 +19,6 @@
 <br />
 
 
-<%= column_chart  @grades %>
+<%= column_chart @grades.each{|city_grade|
+    {:name => city_grade[0]['name'], :data => city_grade[1] }
+} %>
