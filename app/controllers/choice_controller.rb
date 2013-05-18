@@ -5,6 +5,7 @@ class ChoiceController < ApplicationController
     City.all.each do | city |
       puts city['name'], city_grade( city )
     end
+    render "result"
     
   end
 
