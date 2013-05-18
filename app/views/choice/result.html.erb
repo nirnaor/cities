@@ -1,6 +1,13 @@
 <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
 <h1>Here are the results of your choice</h1>
 
+
+
+<% @choice.each do |choice| %>
+  <label><%= choice %> 
+  </br>
+<% end %>
+
 <table>
   <tr>
     <th>City name</th>

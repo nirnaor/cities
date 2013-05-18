@@ -5,6 +5,7 @@ class ChoiceController < ApplicationController
 
   def result
     @grades = cities_grades()
+    @choice = params['city']
     puts @grades
     render "result"
   end
