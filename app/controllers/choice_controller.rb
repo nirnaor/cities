@@ -1,10 +1,11 @@
 class ChoiceController < ApplicationController
   def check
     @city = City.new
-    #puts cities_grades()
   end
 
   def result
+    @grades = cities_grades()
+    puts @grades
     render "result"
   end
 
