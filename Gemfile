@@ -38,3 +38,4 @@ gem "underscore-rails"
 
 # To use debugger
 gem 'debugger'
+gem 'chartkick'
