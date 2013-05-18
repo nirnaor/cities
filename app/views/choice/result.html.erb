@@ -25,7 +25,5 @@
 
 <br />
 
-
-<%= column_chart @grades.each{|city_grade|
-    {:name => city_grade[0]['name'], :data => city_grade[1] }
-} %>
+<%= column_chart @grades_charts %>
+<%= pie_chart @grades_charts %>

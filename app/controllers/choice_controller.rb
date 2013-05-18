@@ -5,6 +5,14 @@ class ChoiceController < ApplicationController
 
   def result
     @grades = cities_grades()
+
+
+    @grades_charts = {}
+
+    @grades.each do | grade | 
+      @grades_charts[ grade[0].name ] = grade[1]
+    end
+
     @choice = params['city']
     puts @grades
     render "result"
