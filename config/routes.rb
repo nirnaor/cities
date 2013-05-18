@@ -1,5 +1,6 @@
 Cities::Application.routes.draw do
   get "choice/check"
+  get "choice/result"
 
   resources :cities
 

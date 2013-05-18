@@ -1,12 +1,23 @@
 class ChoiceController < ApplicationController
   def check
     @city = City.new
+    #puts cities_grades()
+  end
 
-    City.all.each do | city |
-      puts city['name'], city_grade( city )
-    end
+  def result
     render "result"
-    
+  end
+
+
+  def cities_grades()
+    puts "these are the city grades"
+    puts "************************"
+    cities_grades = {}
+    City.all.each do | city |
+      #puts city['name'], city_grade( city )
+      cities_grades[ city ] = city_grade( city )
+    end
+    cities_grades
   end
 
 
