@@ -14,17 +14,13 @@ class ChoiceController < ApplicationController
     end
 
     @choice = params['city']
-    puts @grades
     render "result"
   end
 
 
-  def cities_grades()
-    puts "these are the city grades"
-    puts "************************"
+  def cities_grades
     cities_grades = {}
     City.all.each do | city |
-      #puts city['name'], city_grade( city )
       cities_grades[ city ] = city_grade( city )
     end
     cities_grades
