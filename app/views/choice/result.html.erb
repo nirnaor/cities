@@ -1,18 +1,18 @@
 <h1>Here are the results of your choice</h1>
 
-<%#<table>%>
-  <%#<tr>%>
-    <%#<th>City name</th>%>
-    <%#<th>Grade</th>%>
-  <%#</tr>%>
+<table>
+  <tr>
+    <th>City name</th>
+    <th>Grade</th>
+  </tr>
 
-<%#<% @cities.each do |city| %>%>
-  <%#<tr>%>
-    <%#<td><%= city.name %></td>%>
-    <%#<td><%= city.transportation %></td>%>
-  <%#</tr>%>
-<%#<% end %>%>
-<%#</table>%>
+<% @grades.each do |city_grade| %>
+  <tr>
+    <td><%= city_grade[0].name %></td>
+    <td><%= city_grade[1] %></td>
+  </tr>
+<% end %>
+</table>
 
 <br />
 
