@@ -2,11 +2,16 @@
 <h1>Here are the results of your choice</h1>
 
 
-
-<% @choice.each do |choice| %>
-  <label><%= choice %> 
+  <label> Costs <%= @choice.costs%> 
   </br>
-<% end %>
+  <label> Education <%= @choice.education %> 
+  </br>
+  <label> Environment <%= @choice.enviornment %> 
+  </br>
+  <label> Secutiry <%= @choice.security %> 
+  </br>
+  <label> Transportation <%= @choice.transportation %> 
+  </br>
 
 <table>
   <tr>
@@ -16,9 +21,10 @@
 
 <% @grades.each do |city_grade| %>
   <tr>
-    <td><%= city_grade[0].name %></td>
+    <td><%= city_grade[0] %></td>
     <td><%= city_grade[1] %></td>
-    <td><%= link_to 'Show City', city_grade[0] %></td>
+    <%#<td><%= city_grade[1] %></td>%>
+    <%#<td><%= link_to 'Show City', city_grade[0] %></td>%>
   </tr>
 <% end %>
 </table>
