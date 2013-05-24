@@ -46,7 +46,7 @@ class ChoiceController < ApplicationController
 
 
     results = {}
-    cities_grades().each do | grade |
+    cities_grades( user_choice ).each do | grade |
       results[ grade[0].name] = grade[1]
     end
 
@@ -71,20 +71,20 @@ class ChoiceController < ApplicationController
     result
   end
 
-  def cities_grades
+  def cities_grades( user_proportions )
     cities_grades = {}
     City.all.each do | city |
-      cities_grades[ city ] = city_grade( city )
+      cities_grades[ city ] = city_grade( city, user_proportions )
     end
     cities_grades
   end
 
 
-  def city_grade( city )
-    if params[:city] != nil  
+  def city_grade( city, user_proportions )
+    if user_proportions != nil  
       result = 0
-      params[:city].keys.each do |pr| 
-        result += Integer(city[pr]) * Integer(params["city"][pr]) 
+      user_proportions.keys.each do |pr| 
+        result += Integer(city[pr]) * Integer(user_proportions[pr]) 
       end
       result
     end
