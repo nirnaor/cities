@@ -36,7 +36,8 @@ class ChoiceController < ApplicationController
   def save_choice_to_db
     choice = Choice.new
 
-    user_choice = params['city']
+    user_choice = normalise_choice( params['city'] )
+    
 
     user_choice.each do |criteria|  
       choice[ criteria[0] ] = user_choice[ criteria[0] ]    
@@ -53,6 +54,22 @@ class ChoiceController < ApplicationController
     choice.save
   end
 
+
+  def normalise_choice( user_choice )
+    sum = 0 
+    user_choice.each do | item | 
+      sum += Integer( item[1] ) 
+    end
+
+
+    result = {}
+    proportion = sum / 100.0 
+
+    user_choice.each do | item | 
+      result[ item[0]] = Integer( item[1] ) / proportion
+    end
+    result
+  end
 
   def cities_grades
     cities_grades = {}
