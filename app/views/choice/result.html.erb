@@ -6,14 +6,27 @@
   <div class = "draw">
 
     <div class="choiceparams">
-      <label> Costs <%= draw['choice'].costs%> 
-      <label> Education <%= draw['choice'].education %> 
-      <label> Environment <%= draw['choice'].enviornment %> 
-      <label> Secutiry <%= draw['choice'].security %> 
-      <label> Transportation <%= draw['choice'].transportation %> 
+      <ul>
+        <li>
+          <label> Costs <%= draw['choice'].costs%> 
+        </li>
+        <li>
+          <label> Education <%= draw['choice'].education %> 
+        </li>
+        <li>
+          <label> Environment <%= draw['choice'].enviornment %> 
+        </li>
+        <li>
+          <label> Secutiry <%= draw['choice'].security %> 
+        </li>
+        <li>
+          <label> Transportation <%= draw['choice'].transportation %> 
+        </li>
+      </ul>
     </div>
 
     <div class ="charts">
+      <label> this are the charts
         <%= column_chart draw['grades_charts'] %>
     </div>
 
