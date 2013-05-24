@@ -7,7 +7,7 @@ class ChoiceController < ApplicationController
     save_choice_to_db
     @draws = []
 
-    Choice.last(3).each do | choice | 
+    Choice.last(5).each do | choice | 
       @draws.push( draw_for( choice ) )
     end
     render "result"
