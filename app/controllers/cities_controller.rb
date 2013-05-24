@@ -15,6 +15,14 @@ class CitiesController < ApplicationController
   def show
     @city = City.find(params[:id])
 
+    @chart_dict  = {}
+
+    City.accessible_attributes.each do | attr | 
+      if attr != "" and attr != "name"
+        @chart_dict[ attr ] = @city[attr]
+      end
+    end
+
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @city }
