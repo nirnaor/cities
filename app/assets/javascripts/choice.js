@@ -51,7 +51,7 @@ $(document).ready( function(){
 
       _( $('.interesting')).each( function( item ){
         if ( item.checked === false ){
-            $(item).parent().hide()
+            $(item).parent().hide( 500 );
         }
       });
 
@@ -59,7 +59,7 @@ $(document).ready( function(){
     }
     else{
 
-      $('.draw').show();
+      $('.draw').show( 500 );
 
     }
   });
