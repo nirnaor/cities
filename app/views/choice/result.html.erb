@@ -1,26 +1,23 @@
 <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
 <h1>Here are the results of your last choices</h1>
 
-<div class="choiceparams">
 <% @draws.each do |draw| %>
-  <label> Costs <%= draw['choice'].costs%> 
-  </br>
-  <label> Education <%= draw['choice'].education %> 
-  </br>
-  <label> Environment <%= draw['choice'].enviornment %> 
-  </br>
-  <label> Secutiry <%= draw['choice'].security %> 
-  </br>
-  <label> Transportation <%= draw['choice'].transportation %> 
-  </br>
-</div>
 
+  <div class = "draw">
 
-<br />
-<div class ="charts">
-  <label> this are the charts
-<%= column_chart draw['grades_charts'] %>
-</div>
+    <div class="choiceparams">
+      <label> Costs <%= draw['choice'].costs%> 
+      <label> Education <%= draw['choice'].education %> 
+      <label> Environment <%= draw['choice'].enviornment %> 
+      <label> Secutiry <%= draw['choice'].security %> 
+      <label> Transportation <%= draw['choice'].transportation %> 
+    </div>
+
+    <div class ="charts">
+        <%= column_chart draw['grades_charts'],  :width => "300px" ,:height => "300px" %>
+    </div>
+
+  </div>
 
 <% end %>
 
