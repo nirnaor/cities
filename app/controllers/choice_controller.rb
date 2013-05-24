@@ -15,12 +15,9 @@ class ChoiceController < ApplicationController
       @grades_charts[ grade[0] ] = grade[1]
     end
 
-    #@grades_charts = Choice.last.results
 
 
     @choice = Choice.last
-    #@grades2 = Choice.last()
-    #@choice = params['city']
     render "result"
 
   end
