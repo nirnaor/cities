@@ -69,20 +69,21 @@ div {
 }
 
 .draw{
-  height: 400px;
+  height: 300px;
+  background-color: green;
 }
+
+
 
 .draw .choiceparams{
   background-color: red;
   width: 20%;
-  /*width: 100px;*/
-  /*height: 100px;*/
-  /*margin-top: 45px;*/
+  float: left;
 }
 
 .draw .charts{
   background-color: blue;
   float: right;
-  width: 1200px;
+  width: 70%;
   height: 300px;
 }
