@@ -13,7 +13,7 @@ function get_sum(){
 
 function change_sum(){
   var sum = window.get_sum();
-  $('#sum').text( "Sum is " + sum  + "out of 100");
+  $('#sum').text( "Sum is " + sum  + " out of 100");
 }
 
 
