@@ -7,6 +7,7 @@ class ChoiceController < ApplicationController
     @grades = cities_grades()
 
     choice = Choice.new
+    results = {}
     #choice.results = []
 
     user_choice = params['city']
@@ -24,13 +25,15 @@ class ChoiceController < ApplicationController
 
     @grades.each do | grade | 
       @grades_charts[ grade[0].name ] = grade[1]
+      results[ grade[0].name ] = grade[1]
       #choice.results.push( [ grade[0], grade[ 1 ] ]  )
     end
 
+    choice.save_the_results( results )
+    choice.save
     @choice = params['city']
     render "result"
 
-    choice.save()
   end
 
 

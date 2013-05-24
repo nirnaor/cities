@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130524080106) do
+ActiveRecord::Schema.define(:version => 20130524090511) do
 
   create_table "choices", :force => true do |t|
     t.integer  "environment"
@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(:version => 20130524080106) do
     t.integer  "transportation"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
+    t.binary   "results"
+    t.text     "resultsjson"
   end
 
   create_table "cities", :force => true do |t|
