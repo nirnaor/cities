@@ -3,10 +3,13 @@
 <%= render "check" %>
 
 <h1>Here are the results of your last choices</h1>
+<input class="filterInteresting" type="checkbox"> Show Only interesting choices
 
 <% @draws.each do |draw| %>
 
   <div class = "draw">
+
+    <input class="interesting" type="checkbox"> Check me out
 
     <div class="choiceparams">
       <ul>

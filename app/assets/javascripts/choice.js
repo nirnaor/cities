@@ -43,6 +43,29 @@ $(document).ready( function(){
 
 
 
+  $('.filterInteresting').change( function ( ev ) {
+
+
+    if( ev.currentTarget.checked === true){
+
+
+      _( $('.interesting')).each( function( item ){
+        if ( item.checked === false ){
+            $(item).parent().hide()
+        }
+      });
+
+
+    }
+    else{
+
+      $('.draw').show();
+
+    }
+  });
+
+
+
 
 } ) ;
 
