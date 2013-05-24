@@ -1,6 +1,7 @@
 <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
 <h1>Here are the results of your last choices</h1>
 
+<div class="choiceparams">
 <% @draws.each do |draw| %>
   <label> Costs <%= draw['choice'].costs%> 
   </br>
@@ -12,6 +13,7 @@
   </br>
   <label> Transportation <%= draw['choice'].transportation %> 
   </br>
+</div>
 
 <table>
   <tr>
@@ -23,8 +25,6 @@
   <tr>
     <td><%= city_grade[0] %></td>
     <td><%= city_grade[1] %></td>
-    <%#<td><%= city_grade[1] %></td>%>
-    <%#<td><%= link_to 'Show City', city_grade[0] %></td>%>
   </tr>
 <% end %>
 </table>
