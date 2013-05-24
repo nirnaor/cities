@@ -2,15 +2,15 @@
 <h1>Here are the results of your choice</h1>
 
 
-  <label> Costs <%= @choice.costs%> 
+  <label> Costs <%= @draw['choice'].costs%> 
   </br>
-  <label> Education <%= @choice.education %> 
+  <label> Education <%= @draw['choice'].education %> 
   </br>
-  <label> Environment <%= @choice.enviornment %> 
+  <label> Environment <%= @draw['choice'].enviornment %> 
   </br>
-  <label> Secutiry <%= @choice.security %> 
+  <label> Secutiry <%= @draw['choice'].security %> 
   </br>
-  <label> Transportation <%= @choice.transportation %> 
+  <label> Transportation <%= @draw['choice'].transportation %> 
   </br>
 
 <table>
@@ -19,7 +19,7 @@
     <th>Weighted Grade</th>
   </tr>
 
-<% @grades.each do |city_grade| %>
+<% @draw['grades'].each do |city_grade| %>
   <tr>
     <td><%= city_grade[0] %></td>
     <td><%= city_grade[1] %></td>
@@ -31,5 +31,5 @@
 
 <br />
 
-<%= column_chart @grades_charts %>
-<%= pie_chart @grades_charts %>
+<%= column_chart @draw['grades_charts'] %>
+<%= pie_chart @draw['grades_charts'] %>

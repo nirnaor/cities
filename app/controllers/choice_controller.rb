@@ -16,8 +16,12 @@ class ChoiceController < ApplicationController
     end
 
 
+    @draw = {}
 
     @choice = Choice.last
+    @draw['choice'] = @choice
+    @draw['grades'] = @grades
+    @draw['grades_charts'] = @grades_charts
     render "result"
 
   end
