@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  environment: 1
+  costs: 1
+  education: 1
+  security: 1
+  transportation: 1
+
+two:
+  environment: 1
+  costs: 1
+  education: 1
+  security: 1
+  transportation: 1

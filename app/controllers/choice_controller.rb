@@ -6,15 +6,31 @@ class ChoiceController < ApplicationController
   def result
     @grades = cities_grades()
 
+    choice = Choice.new
+    #choice.results = []
+
+    user_choice = params['city']
+
+    user_choice.each do |criteria|  
+      puts "criteria:" +  criteria[0]   
+      puts "value:" +  user_choice[ criteria[0] ]    
+      choice[ criteria[0] ] = user_choice[ criteria[0] ]    
+    end
+
+
+
 
     @grades_charts = {}
 
     @grades.each do | grade | 
       @grades_charts[ grade[0].name ] = grade[1]
+      #choice.results.push( [ grade[0], grade[ 1 ] ]  )
     end
 
     @choice = params['city']
     render "result"
+
+    choice.save()
   end
 
 
