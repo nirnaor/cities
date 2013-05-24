@@ -4,6 +4,7 @@ class ChoiceController < ApplicationController
   end
 
   def result
+    @city = City.new
     save_choice_to_db
     @draws = []
 
