@@ -1,16 +1,16 @@
 <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
 <h1>Here are the results of your last choices</h1>
 
-
-  <label> Costs <%= @draw['choice'].costs%> 
+<% @draws.each do |draw| %>
+  <label> Costs <%= draw['choice'].costs%> 
   </br>
-  <label> Education <%= @draw['choice'].education %> 
+  <label> Education <%= draw['choice'].education %> 
   </br>
-  <label> Environment <%= @draw['choice'].enviornment %> 
+  <label> Environment <%= draw['choice'].enviornment %> 
   </br>
-  <label> Secutiry <%= @draw['choice'].security %> 
+  <label> Secutiry <%= draw['choice'].security %> 
   </br>
-  <label> Transportation <%= @draw['choice'].transportation %> 
+  <label> Transportation <%= draw['choice'].transportation %> 
   </br>
 
 <table>
@@ -19,7 +19,7 @@
     <th>Weighted Grade</th>
   </tr>
 
-<% @draw['grades'].each do |city_grade| %>
+<% draw['grades'].each do |city_grade| %>
   <tr>
     <td><%= city_grade[0] %></td>
     <td><%= city_grade[1] %></td>
@@ -31,5 +31,8 @@
 
 <br />
 
-<%= column_chart @draw['grades_charts'] %>
-<%= pie_chart @draw['grades_charts'] %>
+<%= column_chart draw['grades_charts'] %>
+<%= pie_chart draw['grades_charts'] %>
+
+<% end %>
+
