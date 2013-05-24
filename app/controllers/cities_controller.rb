@@ -77,6 +77,33 @@ class CitiesController < ApplicationController
     end
   end
 
+
+  def import
+
+    City.delete_all
+    require 'csv'    
+
+    csv_text = File.read('/Users/nirnaori/projects/cities/lib/assets/cities_grades.csv')
+
+
+    csv = CSV.parse(csv_text, :headers => true)
+    csv.each do |row|
+      new_city = City.create
+      new_city.name = row['name']
+      new_city.transportation = row['transportation']
+      new_city.education = row['education']
+      new_city.costs = row['costs']
+      new_city.security = row['security']
+      new_city.enviornment = row['enviornment']
+      new_city.save
+
+      print row
+
+    end
+
+    index
+  end
+
   # DELETE /cities/1
   # DELETE /cities/1.json
   def destroy
