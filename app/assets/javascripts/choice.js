@@ -51,7 +51,7 @@ $(document).ready( function(){
 
       _( $('.interesting')).each( function( item ){
         if ( item.checked === false ){
-            $(item).parent().hide( 500 );
+            $(item).parent().parent().hide( 500 );
         }
       });
 
