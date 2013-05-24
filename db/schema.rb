@@ -11,10 +11,10 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130524090511) do
+ActiveRecord::Schema.define(:version => 20130524112055) do
 
   create_table "choices", :force => true do |t|
-    t.integer  "environment"
+    t.integer  "enviornment"
     t.integer  "costs"
     t.integer  "education"
     t.integer  "security"
