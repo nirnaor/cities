@@ -7,21 +7,21 @@ class ChoiceController < ApplicationController
     save_choice_to_db
 
 
-    @grades_charts = {}
-    @grades = []
+    grades_charts = {}
+    grades = []
 
     Choice.last.results.each do | grade | 
-      @grades.push( grade )
-      @grades_charts[ grade[0] ] = grade[1]
+      grades.push( grade )
+      grades_charts[ grade[0] ] = grade[1]
     end
 
 
     @draw = {}
 
-    @choice = Choice.last
-    @draw['choice'] = @choice
-    @draw['grades'] = @grades
-    @draw['grades_charts'] = @grades_charts
+    choice = Choice.last
+    @draw['choice'] = choice
+    @draw['grades'] = grades
+    @draw['grades_charts'] = grades_charts
     render "result"
 
   end
