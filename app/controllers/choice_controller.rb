@@ -5,25 +5,27 @@ class ChoiceController < ApplicationController
 
   def result
     save_choice_to_db
+    @draw = draw_for( Choice.last )
+    render "result"
+  end
 
 
+  def draw_for( choice )
     grades_charts = {}
     grades = []
 
-    Choice.last.results.each do | grade | 
+    choice.results.each do | grade | 
       grades.push( grade )
       grades_charts[ grade[0] ] = grade[1]
     end
 
 
-    @draw = {}
+    draw = {}
 
-    choice = Choice.last
-    @draw['choice'] = choice
-    @draw['grades'] = grades
-    @draw['grades_charts'] = grades_charts
-    render "result"
-
+    draw['choice'] = choice
+    draw['grades'] = grades
+    draw['grades_charts'] = grades_charts
+    draw
   end
 
   def save_choice_to_db
