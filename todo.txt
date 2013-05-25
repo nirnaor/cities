@@ -1,0 +1,17 @@
+show archive per session of the results and the choices 
+render the choice form in the results form 
+
+
+Change the pie chart to percentage
+maybe show a 500 line of the maximun weighted graph 
+be able to show changes of the chart and show it in front of the visual chart
+take couples of choices and compare them 
+show for each city how it's built
+
+
+choise view
+----------
+form is between 1 to 5 need to check on that
+show the sum of the proportions
+Dont validate that the input is 1 to 100, but normalise it 
+change to weighted grade - Done.
