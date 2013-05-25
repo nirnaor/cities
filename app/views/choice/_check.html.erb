@@ -1,7 +1,6 @@
 <p>Please state the priority you want for your city to live</p>
 
 <%= form_for @city , :url => choice_result_path, :method => "get" do |f|  %>
-<h2 id="sum" te>
 </h2>
 
   <%= f.label :costs %>:
@@ -19,7 +18,7 @@
 
   <%= f.label :transportation %>:
   <%= f.number_field :transportation %><br />
-
+  <label id="sum">Total: </label>
 
 
   <%= f.submit value="Calculate" %>
