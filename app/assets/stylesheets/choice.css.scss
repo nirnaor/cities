@@ -2,19 +2,24 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#sum{
-  color: blue;
+#sum {
   display: block;
   text-decoration: underline;
-  margin-left: 15%;
+  margin-left: 14%;
   margin-top: 1%;
   text-decoration: bold;
   font-weight: bold;
 }
 
+
+
+input[value='Calculate']{
+  margin-top: 4%;
+  margin-left: -10%;
+}
+
 .new_city{
   label{
-    color: red;
     width: 10%;
     float:left;
   }
