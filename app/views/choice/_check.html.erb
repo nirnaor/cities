@@ -3,20 +3,20 @@
 <%= form_for @city , :url => choice_result_path, :method => "get" do |f|  %>
 </h2>
 
-  <%= f.label :costs %>:
+  <%= f.label :costs %>
   <%= f.number_field :costs %><br />
 
-  <%= f.label :education %>:
+  <%= f.label :education %> 
   <%= f.number_field :education %><br />
 
-  <%= f.label :enviornment %>:
+  <%= f.label :enviornment %>
   <%= f.number_field :enviornment %><br />
 
-  <%= f.label :security %>:
+  <%= f.label :security %>
   <%= f.number_field :security %><br />
   
 
-  <%= f.label :transportation %>:
+  <%= f.label :transportation %>
   <%= f.number_field :transportation %><br />
   <label id="sum">Total: </label>
 
