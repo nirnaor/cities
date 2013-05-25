@@ -8,7 +8,7 @@ class ChoiceController < ApplicationController
     save_choice_to_db
     @draws = []
 
-    Choice.find(:all, :limit => 50, :order=> 'created_at desc').each do | choice | 
+    Choice.find(:all, :limit => 10, :order=> 'created_at desc').each do | choice | 
       @draws.push( draw_for( choice ) )
     end
     render "result"
