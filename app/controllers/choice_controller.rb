@@ -34,6 +34,9 @@ class ChoiceController < ApplicationController
   end
 
   def save_choice_to_db
+    if params['city'] == nil 
+      return params['city'] 
+    end
     choice = Choice.new
 
     user_choice = normalise_choice( params['city'] )
