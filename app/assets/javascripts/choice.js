@@ -24,10 +24,30 @@ $(document).ready( function(){
   console.log( "bitch" );
 
   var num_inputs = "input[type='number']";
+  var first_list = "num_inputs";
 
-  _( $(num_inputs) ).each( function( item ) {
-    $( item ).val( _.random(0, 20 ) );
-  } );
+
+  for (var i=0; i < 5; i++) {
+    //debugger;
+    var bla = $('.draw .choiceparams ul li')[i];
+    var bla2 = $(bla).val();
+    //debugger;
+    console.log(bla2);
+
+
+    var nir = $($('.draw .choiceparams ul li label')[i]).html().split(" " ) [2];
+
+
+    var set_it = $("input[type='number']")[i];
+    $(set_it).val( nir);
+
+    //$( item ).val( 5 );
+  };
+
+
+  //_( $($('.draw .choiceparams ul li')) ).each( function( item ) {
+    //$( item ).val( 5 );
+  //} );
 
 
   window.change_sum();
